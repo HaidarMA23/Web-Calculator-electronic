@@ -1,0 +1,1028 @@
+/* ======================================================
+   RESET
+====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.6;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.92
+    );
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid #e5e7eb;
+}
+
+.nav-container {
+    width: min(
+        1180px,
+        92%
+    );
+
+    margin: auto;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.theme-button {
+    border: none;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    background: #eef2ff;
+}
+
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #dbeafe,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #e0e7ff,
+            transparent 40%
+        ),
+        #f8fafc;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: #dbeafe;
+    color: #1d4ed8;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size:
+        clamp(
+            42px,
+            7vw,
+            78px
+        );
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    margin-bottom: 25px;
+
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero-content > p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 32px;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px
+        rgba(37, 99, 235, 0.25);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(37, 99, 235, 0.3);
+}
+
+
+/* ======================================================
+   PROJECT INFO
+====================================================== */
+
+.project-info {
+    margin-top: 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    text-align: left;
+}
+
+.project-info > div {
+    padding: 20px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.05);
+}
+
+.project-info strong {
+    display: block;
+
+    font-size: 14px;
+
+    color: #172033;
+
+    margin-bottom: 6px;
+}
+
+.project-info span {
+    display: block;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* ======================================================
+   SECTION
+====================================================== */
+
+.calculator-section,
+.about-section {
+    width: min(
+        1180px,
+        92%
+    );
+
+    margin: auto;
+
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title > span {
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+
+    margin: 10px 0;
+
+    letter-spacing: -1px;
+}
+
+.section-title p {
+    color: #64748b;
+}
+
+
+/* ======================================================
+   MENU CARD
+====================================================== */
+
+.calculator-menu {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 60px;
+}
+
+.menu-card {
+    padding: 20px;
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    min-height: 145px;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 15px 35px
+        rgba(15, 23, 42, 0.08);
+}
+
+.menu-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 23px;
+
+    font-weight: 800;
+}
+
+.menu-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 4px;
+}
+
+.menu-card p {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* ======================================================
+   CALCULATOR CARD
+   01 - 10 VERTICAL
+====================================================== */
+
+.calculators-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.calculator-card {
+    width: 100%;
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.04);
+
+    scroll-margin-top: 90px;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.calculator-card:hover {
+    box-shadow:
+        0 15px 40px
+        rgba(15, 23, 42, 0.07);
+}
+
+.calculator-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+}
+
+.calculator-number {
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.calculator-header h2 {
+    font-size: 21px;
+
+    margin-bottom: 3px;
+}
+
+.calculator-header p {
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* ======================================================
+   FORM
+====================================================== */
+
+.calculator-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.calculator-form label {
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #374151;
+}
+
+.calculator-form input,
+.calculator-form select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid #dbe1ea;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #172033;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.calculator-form input:focus,
+.calculator-form select:focus {
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.1);
+
+    background: white;
+}
+
+.calculator-form button {
+    margin-top: 14px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.calculator-form button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.calculator-form button:disabled {
+    opacity: 0.7;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* ======================================================
+   DYNAMIC INPUT
+====================================================== */
+
+.dynamic-inputs {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* ======================================================
+   RESULT
+====================================================== */
+
+.result {
+    min-height: 20px;
+
+    margin-top: 18px;
+
+    padding: 0;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.result.success {
+    padding: 16px;
+
+    background: #ecfdf5;
+
+    border:
+        1px solid #a7f3d0;
+
+    color: #065f46;
+}
+
+.result.error {
+    padding: 16px;
+
+    background: #fef2f2;
+
+    border:
+        1px solid #fecaca;
+
+    color: #991b1b;
+}
+
+.result strong {
+    font-size: 16px;
+}
+
+
+/* ======================================================
+   ABOUT
+====================================================== */
+
+.about-section {
+    padding-top: 40px;
+}
+
+.about-card {
+    display: grid;
+
+    grid-template-columns:
+        100px 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+
+    background: white;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.04);
+}
+
+.about-icon {
+    width: 90px;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 40px;
+}
+
+.about-card h2 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #64748b;
+
+    margin-bottom: 13px;
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+.footer-content {
+    width: min(
+        900px,
+        92%
+    );
+
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.footer-content p {
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    margin: 3px 0;
+}
+
+.footer-line {
+    width: 100%;
+
+    height: 1px;
+
+    background: #374151;
+
+    margin: 25px 0;
+}
+
+.footer-content small {
+    color: #6b7280;
+}
+
+
+/* ======================================================
+   DARK MODE
+====================================================== */
+
+body.dark {
+    background: #0f172a;
+
+    color: #e5e7eb;
+}
+
+body.dark .navbar {
+    background:
+        rgba(
+            15,
+            23,
+            42,
+            0.94
+        );
+
+    border-color: #1e293b;
+}
+
+body.dark .nav-links a {
+    color: #cbd5e1;
+}
+
+body.dark .nav-links a:hover {
+    color: #60a5fa;
+}
+
+body.dark .theme-button {
+    background: #1e293b;
+
+    color: white;
+}
+
+body.dark .hero {
+    background:
+        radial-gradient(
+            circle at top left,
+            #172554,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #1e1b4b,
+            transparent 40%
+        ),
+        #0f172a;
+}
+
+body.dark .hero-content > p {
+    color: #94a3b8;
+}
+
+body.dark .hero-badge {
+    background: #172554;
+
+    color: #93c5fd;
+}
+
+body.dark .project-info > div {
+    background: #111827;
+
+    border-color: #1e293b;
+}
+
+body.dark .project-info strong {
+    color: #f1f5f9;
+}
+
+body.dark .project-info span {
+    color: #94a3b8;
+}
+
+body.dark .section-title p {
+    color: #94a3b8;
+}
+
+body.dark .menu-card,
+body.dark .calculator-card,
+body.dark .about-card {
+    background: #111827;
+
+    border-color: #1e293b;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+body.dark .menu-card h3,
+body.dark .calculator-header h2,
+body.dark .about-card h2 {
+    color: #f1f5f9;
+}
+
+body.dark .menu-card p,
+body.dark .calculator-header p,
+body.dark .about-card p {
+    color: #94a3b8;
+}
+
+body.dark .menu-icon,
+body.dark .about-icon {
+    background: #172554;
+
+    color: #60a5fa;
+}
+
+body.dark .calculator-form label {
+    color: #cbd5e1;
+}
+
+body.dark .calculator-form input,
+body.dark .calculator-form select {
+    background: #0f172a;
+
+    border-color: #334155;
+
+    color: #e5e7eb;
+}
+
+body.dark .calculator-form input:focus,
+body.dark .calculator-form select:focus {
+    background: #0f172a;
+
+    border-color: #60a5fa;
+}
+
+body.dark .result.success {
+    background: #052e1b;
+
+    border-color: #065f46;
+
+    color: #a7f3d0;
+}
+
+body.dark .result.error {
+    background: #3b0a0a;
+
+    border-color: #7f1d1d;
+
+    color: #fecaca;
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1000px) {
+
+    .calculator-menu {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .project-info {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    /*
+       Calculator tetap satu kolom.
+       Tidak perlu mengubah .calculators-container
+       karena sudah menggunakan flex column.
+    */
+
+    .calculator-menu {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        min-height: 60px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav-links a {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .calculator-section,
+    .about-section {
+        width: 92%;
+
+        padding:
+            70px 0;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .calculator-menu {
+        grid-template-columns:
+            1fr;
+    }
+
+    .calculator-card {
+        padding: 22px;
+    }
+
+    .about-card {
+        grid-template-columns:
+            1fr;
+
+        padding: 25px;
+    }
+
+    .about-icon {
+        width: 70px;
+
+        height: 70px;
+
+        font-size: 30px;
+    }
+
+    .project-info {
+        margin-top: 40px;
+    }
+
+}

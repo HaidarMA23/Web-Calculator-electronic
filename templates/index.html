@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Electronic Calculator</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+            ⚡ Electronic Calculator
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#calculators">
+                Kalkulator
+            </a>
+
+            <a href="#about">
+                Tentang
+            </a>
+
+            <button
+                id="theme-toggle"
+                class="theme-button"
+                type="button"
+            >
+                🌙
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            PROJEK WEBSITE ALGORITMA PEMROGRAMAN
+        </div>
+
+        <h1>
+            Electronic
+            <span>Calculator</span>
+        </h1>
+
+        <p>
+            Kumpulan kalkulator elektronika untuk
+            membantu perhitungan dasar kelistrikan
+            dengan cepat dan mudah.
+        </p>
+
+        <a
+            href="#calculators"
+            class="hero-button"
+        >
+            Mulai Menghitung →
+        </a>
+
+
+        <!-- IDENTITAS PROYEK -->
+
+        <div class="project-info">
+
+            <div>
+                <strong>
+                    Haidar Maulana Azzaki
+                </strong>
+
+                <span>
+                    40040326640063
+                </span>
+            </div>
+
+
+            <div>
+                <strong>
+                    Teknologi Rekayasa Otomasi
+                </strong>
+
+                <span>
+                    Departemen Sekolah Vokasi
+                </span>
+            </div>
+
+
+            <div>
+                <strong>
+                    Universitas Diponegoro
+                </strong>
+
+                <span>
+                    Dosen Pengampu:
+                    Rofiq Cahyo Prayogo, S.T., M.T
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CALCULATOR MENU
+====================================================== -->
+
+<section
+    id="calculators"
+    class="calculator-section"
+>
+
+    <div class="section-title">
+
+        <span>
+            ELECTRONICS TOOLS
+        </span>
+
+        <h2>
+            Pilih Kalkulator
+        </h2>
+
+        <p>
+            Gunakan berbagai kalkulator untuk
+            membantu perhitungan elektronika.
+        </p>
+
+    </div>
+
+
+    <div class="calculator-menu">
+
+        <a
+            href="#ohm"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                Ω
+            </div>
+
+            <div>
+                <h3>
+                    Hukum Ohm
+                </h3>
+
+                <p>
+                    Tegangan, arus & resistansi
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#power"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                ⚡
+            </div>
+
+            <div>
+                <h3>
+                    Daya Listrik
+                </h3>
+
+                <p>
+                    Menghitung daya listrik
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#series"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                ≡
+            </div>
+
+            <div>
+                <h3>
+                    Resistor Seri
+                </h3>
+
+                <p>
+                    Total resistansi seri
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#parallel"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                ∥
+            </div>
+
+            <div>
+                <h3>
+                    Resistor Paralel
+                </h3>
+
+                <p>
+                    Total resistansi paralel
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#led"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                💡
+            </div>
+
+            <div>
+                <h3>
+                    Resistor LED
+                </h3>
+
+                <p>
+                    Resistor pembatas LED
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#color"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                🎨
+            </div>
+
+            <div>
+                <h3>
+                    Kode Warna Resistor
+                </h3>
+
+                <p>
+                    Membaca nilai resistor
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#energy"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                🔋
+            </div>
+
+            <div>
+                <h3>
+                    Energi Listrik
+                </h3>
+
+                <p>
+                    Menghitung energi listrik
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#divider"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                🔌
+            </div>
+
+            <div>
+                <h3>
+                    Pembagi Tegangan
+                </h3>
+
+                <p>
+                    Menghitung tegangan output
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#capacitor"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                ▣
+            </div>
+
+            <div>
+                <h3>
+                    Kapasitor
+                </h3>
+
+                <p>
+                    Seri & paralel
+                </p>
+            </div>
+        </a>
+
+
+        <a
+            href="#conversion"
+            class="menu-card"
+        >
+            <div class="menu-icon">
+                ⇄
+            </div>
+
+            <div>
+                <h3>
+                    Konversi Satuan
+                </h3>
+
+                <p>
+                    Konversi satuan elektronika
+                </p>
+            </div>
+        </a>
+
+    </div>
+
+
+    <!-- =================================================
+         CALCULATOR CONTAINER
+    ================================================== -->
+
+    <div class="calculators-container">
+
+
+        <!-- =================================================
+             1. HUKUM OHM
+        ================================================== -->
+
+        <div
+            id="ohm"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h2>
+                        Hukum Ohm
+                    </h2>
+
+                    <p>
+                        Menghitung tegangan, arus,
+                        atau resistansi.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-ohm"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="ohm"
+                >
+
+
+                <label>
+                    Yang ingin dihitung
+                </label>
+
+                <select
+                    name="ohm_mode"
+                    id="ohm-mode"
+                >
+
+                    <option value="current">
+                        Arus (I)
+                    </option>
+
+                    <option value="voltage">
+                        Tegangan (V)
+                    </option>
+
+                    <option value="resistance">
+                        Resistansi (R)
+                    </option>
+
+                </select>
+
+
+                <div id="ohm-voltage">
+
+                    <label>
+                        Tegangan (V)
+                    </label>
+
+                    <input
+                        id="ohm-voltage-input"
+                        type="number"
+                        step="any"
+                        name="voltage"
+                        placeholder="Contoh: 12"
+                    >
+
+                </div>
+
+
+                <div id="ohm-current">
+
+                    <label>
+                        Arus (A)
+                    </label>
+
+                    <input
+                        id="ohm-current-input"
+                        type="number"
+                        step="any"
+                        name="current"
+                        placeholder="Contoh: 0.5"
+                    >
+
+                </div>
+
+
+                <div id="ohm-resistance">
+
+                    <label>
+                        Resistansi (Ω)
+                    </label>
+
+                    <input
+                        id="ohm-resistance-input"
+                        type="number"
+                        step="any"
+                        name="resistance"
+                        placeholder="Contoh: 100"
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-ohm"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             2. DAYA
+        ================================================== -->
+
+        <div
+            id="power"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h2>
+                        Daya Listrik
+                    </h2>
+
+                    <p>
+                        Menghitung daya berdasarkan
+                        tegangan dan arus.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-power"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="power"
+                >
+
+
+                <label>
+                    Tegangan (V)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="voltage"
+                    placeholder="Contoh: 12"
+                    required
+                >
+
+
+                <label>
+                    Arus (A)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="current"
+                    placeholder="Contoh: 2"
+                    required
+                >
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-power"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             3. RESISTOR SERI
+        ================================================== -->
+
+        <div
+            id="series"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h2>
+                        Resistor Seri
+                    </h2>
+
+                    <p>
+                        Menghitung resistansi total
+                        rangkaian seri.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-series"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="series"
+                >
+
+
+                <label>
+                    Jumlah Resistor
+                </label>
+
+                <select
+                    id="series-count"
+                    name="resistor_count"
+                >
+
+                    <option value="2">
+                        2 Resistor
+                    </option>
+
+                    <option value="3" selected>
+                        3 Resistor
+                    </option>
+
+                    <option value="4">
+                        4 Resistor
+                    </option>
+
+                    <option value="5">
+                        5 Resistor
+                    </option>
+
+                    <option value="6">
+                        6 Resistor
+                    </option>
+
+                    <option value="7">
+                        7 Resistor
+                    </option>
+
+                    <option value="8">
+                        8 Resistor
+                    </option>
+
+                    <option value="9">
+                        9 Resistor
+                    </option>
+
+                    <option value="10">
+                        10 Resistor
+                    </option>
+
+                </select>
+
+
+                <div
+                    id="series-inputs"
+                    class="dynamic-inputs"
+                ></div>
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-series"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             4. RESISTOR PARALEL
+        ================================================== -->
+
+        <div
+            id="parallel"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h2>
+                        Resistor Paralel
+                    </h2>
+
+                    <p>
+                        Menghitung resistansi total
+                        rangkaian paralel.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-parallel"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="parallel"
+                >
+
+
+                <label>
+                    Jumlah Resistor
+                </label>
+
+                <select
+                    id="parallel-count"
+                    name="resistor_count"
+                >
+
+                    <option value="2">
+                        2 Resistor
+                    </option>
+
+                    <option value="3" selected>
+                        3 Resistor
+                    </option>
+
+                    <option value="4">
+                        4 Resistor
+                    </option>
+
+                    <option value="5">
+                        5 Resistor
+                    </option>
+
+                    <option value="6">
+                        6 Resistor
+                    </option>
+
+                    <option value="7">
+                        7 Resistor
+                    </option>
+
+                    <option value="8">
+                        8 Resistor
+                    </option>
+
+                    <option value="9">
+                        9 Resistor
+                    </option>
+
+                    <option value="10">
+                        10 Resistor
+                    </option>
+
+                </select>
+
+
+                <div
+                    id="parallel-inputs"
+                    class="dynamic-inputs"
+                ></div>
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-parallel"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             5. RESISTOR LED
+        ================================================== -->
+
+        <div
+            id="led"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    05
+                </div>
+
+                <div>
+
+                    <h2>
+                        Resistor LED
+                    </h2>
+
+                    <p>
+                        Menghitung resistor pembatas
+                        arus LED.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-led"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="led"
+                >
+
+
+                <label>
+                    Tegangan Sumber (V)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="supply"
+                    placeholder="Contoh: 12"
+                    required
+                >
+
+
+                <label>
+                    Tegangan LED (V)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="led_voltage"
+                    placeholder="Contoh: 2"
+                    required
+                >
+
+
+                <label>
+                    Arus LED (mA)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="led_current"
+                    placeholder="Contoh: 20"
+                    required
+                >
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-led"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             6. KODE WARNA
+        ================================================== -->
+
+        <div
+            id="color"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    06
+                </div>
+
+                <div>
+
+                    <h2>
+                        Kode Warna Resistor
+                    </h2>
+
+                    <p>
+                        Menghitung nilai resistor
+                        berdasarkan warna gelang.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-color"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="color"
+                >
+
+
+                <label>
+                    Jumlah Gelang
+                </label>
+
+                <select
+                    id="bands"
+                    name="bands"
+                >
+
+                    <option value="4">
+                        4 Gelang
+                    </option>
+
+                    <option value="5">
+                        5 Gelang
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Gelang 1
+                </label>
+
+                <select name="color1">
+
+                    <option value="black">
+                        Hitam
+                    </option>
+
+                    <option value="brown">
+                        Cokelat
+                    </option>
+
+                    <option value="red">
+                        Merah
+                    </option>
+
+                    <option value="orange">
+                        Oranye
+                    </option>
+
+                    <option value="yellow">
+                        Kuning
+                    </option>
+
+                    <option value="green">
+                        Hijau
+                    </option>
+
+                    <option value="blue">
+                        Biru
+                    </option>
+
+                    <option value="violet">
+                        Ungu
+                    </option>
+
+                    <option value="gray">
+                        Abu-abu
+                    </option>
+
+                    <option value="white">
+                        Putih
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Gelang 2
+                </label>
+
+                <select name="color2">
+
+                    <option value="black">
+                        Hitam
+                    </option>
+
+                    <option value="brown" selected>
+                        Cokelat
+                    </option>
+
+                    <option value="red">
+                        Merah
+                    </option>
+
+                    <option value="orange">
+                        Oranye
+                    </option>
+
+                    <option value="yellow">
+                        Kuning
+                    </option>
+
+                    <option value="green">
+                        Hijau
+                    </option>
+
+                    <option value="blue">
+                        Biru
+                    </option>
+
+                    <option value="violet">
+                        Ungu
+                    </option>
+
+                    <option value="gray">
+                        Abu-abu
+                    </option>
+
+                    <option value="white">
+                        Putih
+                    </option>
+
+                </select>
+
+
+                <div
+                    id="third-band"
+                    style="display: none;"
+                >
+
+                    <label>
+                        Gelang 3
+                    </label>
+
+                    <select name="color3">
+
+                        <option value="black">
+                            Hitam
+                        </option>
+
+                        <option value="brown">
+                            Cokelat
+                        </option>
+
+                        <option value="red">
+                            Merah
+                        </option>
+
+                        <option value="orange">
+                            Oranye
+                        </option>
+
+                        <option value="yellow">
+                            Kuning
+                        </option>
+
+                        <option value="green">
+                            Hijau
+                        </option>
+
+                        <option value="blue">
+                            Biru
+                        </option>
+
+                        <option value="violet">
+                            Ungu
+                        </option>
+
+                        <option value="gray">
+                            Abu-abu
+                        </option>
+
+                        <option value="white">
+                            Putih
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <label>
+                    Gelang Pengali
+                </label>
+
+                <select name="multiplier">
+
+                    <option value="black">
+                        Hitam ×1
+                    </option>
+
+                    <option value="brown">
+                        Cokelat ×10
+                    </option>
+
+                    <option value="red">
+                        Merah ×100
+                    </option>
+
+                    <option value="orange">
+                        Oranye ×1.000
+                    </option>
+
+                    <option value="yellow">
+                        Kuning ×10.000
+                    </option>
+
+                    <option value="green">
+                        Hijau ×100.000
+                    </option>
+
+                    <option value="blue">
+                        Biru ×1.000.000
+                    </option>
+
+                    <option value="violet">
+                        Ungu ×10.000.000
+                    </option>
+
+                    <option value="gray">
+                        Abu-abu ×100.000.000
+                    </option>
+
+                    <option value="white">
+                        Putih ×1.000.000.000
+                    </option>
+
+                    <option value="gold">
+                        Emas ×0,1
+                    </option>
+
+                    <option value="silver">
+                        Perak ×0,01
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Toleransi
+                </label>
+
+                <select name="tolerance">
+
+                    <option value="brown">
+                        Cokelat ±1%
+                    </option>
+
+                    <option value="red">
+                        Merah ±2%
+                    </option>
+
+                    <option value="green">
+                        Hijau ±0,5%
+                    </option>
+
+                    <option value="blue">
+                        Biru ±0,25%
+                    </option>
+
+                    <option value="violet">
+                        Ungu ±0,1%
+                    </option>
+
+                    <option value="gray">
+                        Abu-abu ±0,05%
+                    </option>
+
+                    <option value="gold" selected>
+                        Emas ±5%
+                    </option>
+
+                    <option value="silver">
+                        Perak ±10%
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-color"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             7. ENERGI
+        ================================================== -->
+
+        <div
+            id="energy"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    07
+                </div>
+
+                <div>
+
+                    <h2>
+                        Energi Listrik
+                    </h2>
+
+                    <p>
+                        Menghitung energi listrik.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-energy"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="energy"
+                >
+
+
+                <label>
+                    Daya (W)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="power"
+                    placeholder="Contoh: 100"
+                    required
+                >
+
+
+                <label>
+                    Waktu (jam)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="time"
+                    placeholder="Contoh: 5"
+                    required
+                >
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-energy"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             8. PEMBAGI TEGANGAN
+        ================================================== -->
+
+        <div
+            id="divider"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    08
+                </div>
+
+                <div>
+
+                    <h2>
+                        Pembagi Tegangan
+                    </h2>
+
+                    <p>
+                        Menghitung tegangan output.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-divider"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="divider"
+                >
+
+
+                <label>
+                    Tegangan Input (V)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="divider_voltage"
+                    placeholder="Contoh: 12"
+                    required
+                >
+
+
+                <label>
+                    R1 (Ω)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="divider_r1"
+                    placeholder="Contoh: 1000"
+                    required
+                >
+
+
+                <label>
+                    R2 (Ω)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="divider_r2"
+                    placeholder="Contoh: 2000"
+                    required
+                >
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-divider"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             9. KAPASITOR
+        ================================================== -->
+
+        <div
+            id="capacitor"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    09
+                </div>
+
+                <div>
+
+                    <h2>
+                        Kapasitor
+                    </h2>
+
+                    <p>
+                        Menghitung kapasitor seri
+                        atau paralel.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-capacitor"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="capacitor"
+                >
+
+
+                <label>
+                    Jenis Rangkaian
+                </label>
+
+                <select name="capacitor_mode">
+
+                    <option value="series">
+                        Seri
+                    </option>
+
+                    <option value="parallel">
+                        Paralel
+                    </option>
+
+                </select>
+
+
+                <label>
+                    C1 (F)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="c1"
+                    placeholder="Contoh: 0.000001"
+                    required
+                >
+
+
+                <label>
+                    C2 (F)
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="c2"
+                    placeholder="Contoh: 0.000002"
+                    required
+                >
+
+
+                <button type="submit">
+                    Hitung
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-capacitor"
+                class="result"
+            ></div>
+
+        </div>
+
+
+        <!-- =================================================
+             10. KONVERSI
+        ================================================== -->
+
+        <div
+            id="conversion"
+            class="calculator-card"
+        >
+
+            <div class="calculator-header">
+
+                <div class="calculator-number">
+                    10
+                </div>
+
+                <div>
+
+                    <h2>
+                        Konversi Satuan Elektronika
+                    </h2>
+
+                    <p>
+                        Mengubah satuan elektronika.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="calculator-form"
+                data-result="result-conversion"
+            >
+
+                <input
+                    type="hidden"
+                    name="calculator"
+                    value="conversion"
+                >
+
+
+                <label>
+                    Jenis Satuan
+                </label>
+
+                <select name="conversion_unit">
+
+                    <option value="ohm">
+                        Resistansi (Ω)
+                    </option>
+
+                    <option value="farad">
+                        Kapasitansi (F)
+                    </option>
+
+                    <option value="volt">
+                        Tegangan (V)
+                    </option>
+
+                    <option value="ampere">
+                        Arus (A)
+                    </option>
+
+                    <option value="watt">
+                        Daya (W)
+                    </option>
+
+                    <option value="henry">
+                        Induktansi (H)
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Nilai
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    name="conversion_value"
+                    placeholder="Contoh: 1000"
+                    required
+                >
+
+
+                <label>
+                    Dari
+                </label>
+
+                <select name="prefix_from">
+
+                    <option value="G">
+                        Giga
+                    </option>
+
+                    <option value="M">
+                        Mega
+                    </option>
+
+                    <option value="k">
+                        Kilo
+                    </option>
+
+                    <option value="" selected>
+                        Satuan Dasar
+                    </option>
+
+                    <option value="m">
+                        Milli
+                    </option>
+
+                    <option value="u">
+                        Mikro
+                    </option>
+
+                    <option value="n">
+                        Nano
+                    </option>
+
+                    <option value="p">
+                        Pico
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Ke
+                </label>
+
+                <select name="prefix_to">
+
+                    <option value="G">
+                        Giga
+                    </option>
+
+                    <option value="M">
+                        Mega
+                    </option>
+
+                    <option value="k">
+                        Kilo
+                    </option>
+
+                    <option value="" selected>
+                        Satuan Dasar
+                    </option>
+
+                    <option value="m">
+                        Milli
+                    </option>
+
+                    <option value="u">
+                        Mikro
+                    </option>
+
+                    <option value="n">
+                        Nano
+                    </option>
+
+                    <option value="p">
+                        Pico
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Konversi
+                </button>
+
+            </form>
+
+
+            <div
+                id="result-conversion"
+                class="result"
+            ></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+====================================================== -->
+
+<section
+    id="about"
+    class="about-section"
+>
+
+    <div class="section-title">
+
+        <span>
+            ABOUT PROJECT
+        </span>
+
+        <h2>
+            Tentang Website
+        </h2>
+
+    </div>
+
+
+    <div class="about-card">
+
+        <div class="about-icon">
+            ⚡
+        </div>
+
+        <div>
+
+            <h2>
+                Electronic Calculator
+            </h2>
+
+            <p>
+                Electronic Calculator merupakan website
+                yang dibuat untuk membantu melakukan
+                perhitungan dasar dalam bidang elektronika.
+                Website ini menyediakan berbagai kalkulator
+                seperti Hukum Ohm, daya listrik, resistor,
+                LED, energi, pembagi tegangan, kapasitor,
+                dan konversi satuan.
+            </p>
+
+            <p>
+                Website ini menggunakan Python dengan
+                framework Flask sebagai bagian backend
+                dan HTML, CSS, serta JavaScript sebagai
+                bagian frontend.
+            </p>
+
+            <p>
+                Proses perhitungan dilakukan melalui
+                komunikasi antara JavaScript dan Flask
+                menggunakan metode Fetch API sehingga
+                hasil dapat ditampilkan tanpa melakukan
+                reload halaman.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>
+            ⚡ Electronic Calculator
+        </h3>
+
+        <p>
+            Projek Website Algoritma Pemrograman
+        </p>
+
+        <p>
+            Haidar Maulana Azzaki
+            • 40040326640063
+        </p>
+
+        <p>
+            Teknologi Rekayasa Otomasi
+            • Universitas Diponegoro
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 Electronic Calculator
+        </small>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+// =======================================================
+// DARK MODE
+// =======================================================
+
+const themeButton =
+    document.getElementById("theme-toggle");
+
+
+const savedTheme =
+    localStorage.getItem("theme");
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark");
+
+    themeButton.textContent = "☀️";
+
+}
+
+
+themeButton.addEventListener(
+    "click",
+    function () {
+
+        document.body.classList.toggle("dark");
+
+        const isDark =
+            document.body.classList.contains("dark");
+
+
+        if (isDark) {
+
+            themeButton.textContent = "☀️";
+
+            localStorage.setItem(
+                "theme",
+                "dark"
+            );
+
+        } else {
+
+            themeButton.textContent = "🌙";
+
+            localStorage.setItem(
+                "theme",
+                "light"
+            );
+
+        }
+
+    }
+);
+
+
+// =======================================================
+// HUKUM OHM
+// =======================================================
+
+const ohmMode =
+    document.getElementById("ohm-mode");
+
+const ohmVoltage =
+    document.getElementById("ohm-voltage");
+
+const ohmCurrent =
+    document.getElementById("ohm-current");
+
+const ohmResistance =
+    document.getElementById("ohm-resistance");
+
+
+const ohmVoltageInput =
+    document.getElementById(
+        "ohm-voltage-input"
+    );
+
+const ohmCurrentInput =
+    document.getElementById(
+        "ohm-current-input"
+    );
+
+const ohmResistanceInput =
+    document.getElementById(
+        "ohm-resistance-input"
+    );
+
+
+function updateOhmInputs() {
+
+    const mode =
+        ohmMode.value;
+
+
+    // Sembunyikan semua
+
+    ohmVoltage.style.display = "none";
+
+    ohmCurrent.style.display = "none";
+
+    ohmResistance.style.display = "none";
+
+
+    // Nonaktifkan semua input
+
+    ohmVoltageInput.disabled = true;
+
+    ohmCurrentInput.disabled = true;
+
+    ohmResistanceInput.disabled = true;
+
+
+    // Hilangkan required
+
+    ohmVoltageInput.required = false;
+
+    ohmCurrentInput.required = false;
+
+    ohmResistanceInput.required = false;
+
+
+    // Hitung ARUS
+    // Membutuhkan V dan R
+
+    if (mode === "current") {
+
+        ohmVoltage.style.display = "block";
+
+        ohmResistance.style.display = "block";
+
+
+        ohmVoltageInput.disabled = false;
+
+        ohmResistanceInput.disabled = false;
+
+
+        ohmVoltageInput.required = true;
+
+        ohmResistanceInput.required = true;
+
+    }
+
+
+    // Hitung TEGANGAN
+    // Membutuhkan I dan R
+
+    else if (mode === "voltage") {
+
+        ohmCurrent.style.display = "block";
+
+        ohmResistance.style.display = "block";
+
+
+        ohmCurrentInput.disabled = false;
+
+        ohmResistanceInput.disabled = false;
+
+
+        ohmCurrentInput.required = true;
+
+        ohmResistanceInput.required = true;
+
+    }
+
+
+    // Hitung RESISTANSI
+    // Membutuhkan V dan I
+
+    else if (mode === "resistance") {
+
+        ohmVoltage.style.display = "block";
+
+        ohmCurrent.style.display = "block";
+
+
+        ohmVoltageInput.disabled = false;
+
+        ohmCurrentInput.disabled = false;
+
+
+        ohmVoltageInput.required = true;
+
+        ohmCurrentInput.required = true;
+
+    }
+
+}
+
+
+ohmMode.addEventListener(
+    "change",
+    updateOhmInputs
+);
+
+
+updateOhmInputs();
+
+
+// =======================================================
+// RESISTOR DINAMIS
+// =======================================================
+
+function generateResistors(
+    selectId,
+    containerId,
+    type
+) {
+
+    const select =
+        document.getElementById(selectId);
+
+    const container =
+        document.getElementById(containerId);
+
+
+    function update() {
+
+        const count =
+            parseInt(select.value);
+
+
+        container.innerHTML = "";
+
+
+        for (
+            let i = 1;
+            i <= count;
+            i++
+        ) {
+
+            const label =
+                document.createElement("label");
+
+            label.textContent =
+                `Resistor R${i} (Ω)`;
+
+
+            const input =
+                document.createElement("input");
+
+            input.type = "number";
+
+            input.step = "any";
+
+            input.name = `r${i}`;
+
+            input.placeholder =
+                `Contoh: ${i * 100}`;
+
+
+            input.required = true;
+
+
+            container.appendChild(label);
+
+            container.appendChild(input);
+
+        }
+
+    }
+
+
+    select.addEventListener(
+        "change",
+        update
+    );
+
+
+    update();
+
+}
+
+
+generateResistors(
+    "series-count",
+    "series-inputs",
+    "series"
+);
+
+
+generateResistors(
+    "parallel-count",
+    "parallel-inputs",
+    "parallel"
+);
+
+
+// =======================================================
+// KODE WARNA RESISTOR
+// =======================================================
+
+const bands =
+    document.getElementById("bands");
+
+
+const thirdBand =
+    document.getElementById("third-band");
+
+
+function updateBands() {
+
+    if (bands.value === "5") {
+
+        thirdBand.style.display =
+            "block";
+
+    } else {
+
+        thirdBand.style.display =
+            "none";
+
+    }
+
+}
+
+
+bands.addEventListener(
+    "change",
+    updateBands
+);
+
+
+updateBands();
+
+
+// =======================================================
+// SUBMIT SEMUA FORM
+// TANPA RELOAD HALAMAN
+// =======================================================
+
+const forms =
+    document.querySelectorAll(
+        ".calculator-form"
+    );
+
+
+forms.forEach(
+    function (form) {
+
+        form.addEventListener(
+            "submit",
+            async function (event) {
+
+                event.preventDefault();
+
+
+                const resultId =
+                    form.dataset.result;
+
+
+                const resultBox =
+                    document.getElementById(
+                        resultId
+                    );
+
+
+                const button =
+                    form.querySelector(
+                        "button[type='submit']"
+                    );
+
+
+                const originalText =
+                    button.textContent;
+
+
+                button.disabled = true;
+
+                button.textContent =
+                    "Menghitung...";
+
+
+                resultBox.className =
+                    "result";
+
+
+                resultBox.innerHTML =
+                    "Memproses...";
+
+
+                try {
+
+                    const formData =
+                        new FormData(form);
+
+
+                    const response =
+                        await fetch(
+                            "/calculate",
+                            {
+                                method: "POST",
+                                body: formData
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    if (data.success) {
+
+                        resultBox.className =
+                            "result success";
+
+                        resultBox.innerHTML =
+                            data.result;
+
+                    } else {
+
+                        resultBox.className =
+                            "result error";
+
+                        resultBox.innerHTML =
+                            data.message;
+
+                    }
+
+                }
+
+                catch (error) {
+
+                    resultBox.className =
+                        "result error";
+
+                    resultBox.innerHTML =
+                        "Terjadi kesalahan pada server.";
+
+                    console.error(error);
+
+                }
+
+                finally {
+
+                    button.disabled = false;
+
+                    button.textContent =
+                        originalText;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+// =======================================================
+// SMOOTH SCROLL
+// =======================================================
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(
+    function (link) {
+
+        link.addEventListener(
+            "click",
+            function (event) {
+
+                const target =
+                    document.querySelector(
+                        this.getAttribute("href")
+                    );
+
+
+                if (target) {
+
+                    event.preventDefault();
+
+
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+</script>
+
+</body>
+
+</html>
